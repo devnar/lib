@@ -1,22 +1,19 @@
-## Add NAR icon
+# NAR
+bu sitenin amacı daha hızlı ve kolay kodlama yapmaktır. [NAR](https://devnar.github.io/about)
+
+## Add {nar}
 ```html
 <link rel="stylesheet" href="https://devnar.github.io/lib/icon.css">
 ```
-[more info...](https://devnar.github.io/lib/)
-
-## Add NAR css
 ```html
 <link rel="stylesheet" href="https://devnar.github.io/lib/all.css">
 ```
-[more info...](https://devnar.github.io/lib/)
-
-## Add NAR js
 ```html
 <script src="https://devnar.github.io/lib/all.js"></script>
 ```
-[more info...](https://devnar.github.io/lib/)
+[more info...](https://devnar.github.io/lib/info)
 
-## HTML template;
+## HTML template
 ```html
 <html> 
     <head>
