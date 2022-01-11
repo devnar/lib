@@ -1,4 +1,3 @@
-# NAR
 bu sitenin amacı daha hızlı ve kolay kodlama yapmaktır. [NAR](https://devnar.github.io/about)
 
 ## Add {nar}
