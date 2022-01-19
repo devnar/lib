@@ -1,7 +1,7 @@
 # NAR
 bu sitenin amacı daha hızlı ve kolay kodlama yapmaktır. [NAR](https://devnar.github.io/about)
 
-[Daha fazla bilgi edin](lib/info)
+[Daha fazla bilgi edin](info)
 
 ## Add {nar}
 ```html
