@@ -1,7 +1,7 @@
 # NAR
 bu sitenin amacı daha hızlı ve kolay kodlama yapmaktır. [NAR](https://devnar.github.io/about)
 
-<button onclick="https://devnar.github.io/lib/info" style="color: white;background: rgba(0,0,0,0.5);border: 2px solid #23b5b5;">Daha fazla bilgi</button>
+[Daha fazla bilgi edin](https://devnar.github.io/lib/info)
 
 ## Add {nar}
 ```html
