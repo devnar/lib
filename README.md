@@ -12,8 +12,9 @@ bu sitenin amacı daha hızlı ve kolay kodlama yapmaktır. [NAR](https://devnar
 ```
 ```html
 <script src="https://devnar.github.io/lib/all.js"></script>
-
+```
 ## HTML template
+
 ```html
 <html> 
     <head>
