@@ -1,0 +1,218 @@
+<html>
+    <head>
+        <title>NAR - lib</title>
+        <!-- Meta -->
+        <meta name="viewport" content="width=device-width,  initial-scale=1, maximum-scale=1 user-scalable=0" />
+        <meta name="description" content="Hazır HTML şablonu, CSS ve JS kodları, simgeler" />
+        <meta name="copyright" content="NAR © 2021 Tüm hakları saklı" />
+        <meta name="theme-color" content="#23b5b5" />
+        <meta property="og:title" content="NAR - lib" />
+        <meta property="og:description" content="Hazır HTML şablonu, CSS ve JS kodları, simgeler" />
+        <meta property="og:image" content="https://devnar.github.io/logos/n.png" />
+        <!-- /robots -->
+        <meta name="robots" content="index,follow" />
+        <meta name="revisit-after" content="1 days" />
+        <!-- Link -->
+        <link rel="shortcut icon" type="image/png" href="https://devnar.github.io/logos/n.png" />
+        <link rel="stylesheet" href="https://devnar.github.io/lib/icon.css" />
+        <link rel="stylesheet" href="https://devnar.github.io/lib/all.css" />
+        <link rel="stylesheet" href="style.css" />
+        <!-- Script -->
+        <script src="https://devnar.github.io/lib/all.js"></script>
+        <script>
+            function openMenu() {
+                document.getElementById("sidebar").style.display = "block";
+            }
+            function closeMenu() {
+                document.getElementById("sidebar").style.display = "none";
+            }
+        </script>
+        <!-- Style -->
+        <style>
+            body {
+                color: white;
+                background: #363940;
+            }
+
+            pre {
+                overflow: hidden;
+            }
+
+            .nc-sidebar {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            header {
+                width: 100%;
+                height: 286px;
+                margin: 0;
+                padding: 10px;
+                background-image: url("https://devnar.github.io/gif/oda.gif");
+                border-radius: 0px 0px 40% 40%;
+            }
+
+            .top button {
+                border: 1px solid white;
+                font-size: medium;
+            }
+            .top a {
+                text-decoration: none;
+            }
+            .top a:hover {
+                text-decoration: none;
+                opacity: 0.5;
+            }
+            .top a img {
+                width: 45px;
+                margin-right: 5px;
+            }
+            .top i {
+                float: right;
+                font-size: 30px;
+            }
+            .top p {
+                width: 100%;
+                font-size: xx-large;
+                text-align: center;
+            }
+            .ic-mar {
+                margin-top: 8px;
+            }
+
+            @media only screen and (min-width: 600px) {
+                main {
+                    width: 100%;
+                    padding-left: 20%;
+                    padding-right: 20%;
+                }
+            }
+            @media only screen and (max-width: 600px) {
+                main {
+                    width: 100%;
+                    padding: 20px;
+                }
+            }
+
+            .nc-code {
+                color: #000;
+                border-radius: 5px;
+                padding-right: 100;
+            }
+            .nc-grey {
+                margin-top: 10px;
+            }
+
+            footer {
+                text-align: center;
+                color: rgb(156, 156, 156);
+            }
+            footer div a {
+                text-decoration: none;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nc-sidebar nc-bar-block nc-border-left" style="display: none; right: 0;" id="sidebar">
+            <button onclick="closeMenu()" class="nc-bar-item nc-xlarge">Close &times;</button>
+            <a href="#" class="nc-bar-item nc-button">ICON</a>
+            <div class="nc-dropdown-hover">
+                <button class="nc-button">CSS <i class="icon n-chevron-down"></i></button>
+                <div class="nc-dropdown-content nc-bar-block">
+                    <a href="doc.html#color" class="nc-bar-item nc-button">Color</a>
+                    <a href="doc.html#color-types" class="nc-bar-item nc-button">Color Types</a>
+                    <a href="doc.html#container" class="nc-bar-item nc-button">Container</a>
+                    <a href="doc.html#panel" class="nc-bar-item nc-button">Panel</a>
+                    <a href="doc.html#border" class="nc-bar-item nc-button">Border</a>
+                    <a href="doc.html#cards" class="nc-bar-item nc-button">Cards</a>
+                    <a href="doc.html#fonts" class="nc-bar-item nc-button">Fonts</a>
+                    <a href="doc.html#text" class="nc-bar-item nc-button">Text</a>
+                    <a href="doc.html#round" class="nc-bar-item nc-button">Round</a>
+                    <a href="doc.html#margin" class="nc-bar-item nc-button">Margin</a>
+                    <a href="doc.html#padding" class="nc-bar-item nc-button">Padding</a>
+                </div>
+            </div>
+            <div class="nc-dropdown-hover">
+                <button class="nc-button">JS <i class="icon n-chevron-down"></i></button>
+                <div class="nc-dropdown-content nc-bar-block">
+                    <a href="doc.html#selectors" class="nc-bar-item nc-button">Selectors</a>
+                    <a href="doc.html#hide" class="nc-bar-item nc-button">Hide</a>
+                    <a href="doc.html#show" class="nc-bar-item nc-button">Show</a>
+                    <a href="doc.html#add-style" class="nc-bar-item nc-button">Add Style</a>
+                    <a href="doc.html#add-class" class="nc-bar-item nc-button">Add Class</a>
+                    <a href="doc.html#filters" class="nc-bar-item nc-button">Filters</a>
+                    <a href="doc.html#sort" class="nc-bar-item nc-button">Sort</a>
+                    <a href="doc.html#slide-shows" class="nc-bar-item nc-button">Slide Shows</a>
+                    <a href="doc.html#display" class="nc-bar-item nc-button">Display</a>
+                </div>
+            </div>
+        </div>
+        <header>
+            <div class="top">
+                <a href=""><img src="https://devnar.github.io/logos/n.png" />{NAR}</a>
+                <i class="icon n-menu-alt-right nc-hide-large" onclick="openMenu()"></i>
+                <p>
+                    Hazır HTML şablonu, CSS ve JS kodları, simgeler
+                    <br />
+                    <button class="nc-cyan nc-round"><a href="https://github.com/devnar/lib">view on Github</a></button>
+                    <button class="nc-cyan nc-round"><a href="doc.html">more info</a></button>
+                </p>
+            </div>
+        </header>
+        <main>
+            <h2 class="nc-center">Add to your code</h2>
+            <div class="nc-cyan nc-round nc-padding" id="icon-css-js">
+                ICON & CSS & JS<br />
+                <br />
+                Please place these codes between <span class="nc-codespan nc-round">HEAD</span> tag
+            </div>
+            <div class="nc-code nc-black htmlHigh">
+                &lt;link rel="stylesheet" href="https://devnar.github.io/lib/icon.css">
+            </div>
+            <div class="nc-code nc-black htmlHigh">
+                &lt;link rel="stylesheet" href="https://devnar.github.io/lib/all.css">
+            </div>
+            <div class="nc-code nc-black htmlHigh">
+                &lt;script src="https://devnar.github.io/lib/all.js">&lt;/script>
+            </div>
+            <div class="nc-cyan nc-round nc-padding" id="html">
+                HTML template<br />
+                <br />
+                This template offers all the necessary things
+            </div>
+            <pre class="nc-code nc-black">
+<code><span class="nc-text-blue">&lt;html&gt;</span> 
+<span class="nc-text-blue">&lt;head&gt;</span>
+    <span class="nc-text-blue">&lt;title&gt;</span>title<span class="nc-text-blue">&lt;/title&gt;</span>
+    <span class="nc-text-grey">&lt;!-- Meta --&gt;</span>
+        <span class="nc-text-blue">&lt;meta</span> <span class="nc-text-cyan">name=</span><span class="nc-text-red">"viewport"</span> <span class="nc-text-cyan">content=</span><span class="nc-text-red">"width=device-width,  initial-scale=1, maximum-scale=1 user-scalable=0"</span><span class="nc-text-blue">&gt;</span>
+        <span class="nc-text-blue">&lt;meta</span> <span class="nc-text-cyan">name=</span><span class="nc-text-red">"description"</span> <span class="nc-text-cyan">content=</span><span class="nc-text-red">"description"</span><span class="nc-text-blue">&gt;</span>
+        <span class="nc-text-blue">&lt;meta</span> <span class="nc-text-cyan">name=</span><span class="nc-text-red">"copyright"</span> <span class="nc-text-cyan">content=</span><span class="nc-text-red">"NAR © 2021 Tüm hakları saklı"</span><span class="nc-text-blue">&gt;</span>
+        <span class="nc-text-blue">&lt;meta</span> <span class="nc-text-cyan">name=</span><span class="nc-text-red">"theme-color"</span> <span class="nc-text-cyan">content=</span><span class="nc-text-red">"#23b5b5"</span><span class="nc-text-blue">&gt;</span>
+        <span class="nc-text-blue">&lt;meta</span> <span class="nc-text-cyan">property=</span><span class="nc-text-red">"og:title"</span> <span class="nc-text-cyan">content=</span><span class="nc-text-red">"title"</span> <span class="nc-text-blue">&gt;</span> 
+        <span class="nc-text-blue">&lt;meta</span> <span class="nc-text-cyan">property=</span><span class="nc-text-red">"og:description"</span> <span class="nc-text-cyan">content=</span><span class="nc-text-red">"description"</span> <span class="nc-text-blue">/&gt;</span> 
+        <span class="nc-text-blue">&lt;meta</span> <span class="nc-text-cyan">property=</span><span class="nc-text-red">"og:image"</span> <span class="nc-text-cyan">content=</span><span class="nc-text-red">"https://devnar.github.io/nar.png"</span> <span class="nc-text-blue">/&gt;</span> 
+    <span class="nc-text-grey">&lt;!-- /robots --&gt;</span>
+        <span class="nc-text-blue">&lt;meta</span> <span class="nc-text-cyan">name=</span><span class="nc-text-red">"robots"</span> <span class="nc-text-cyan">content=</span><span class="nc-text-red">"index,follow"</span><span class="nc-text-blue">&gt;</span>
+        <span class="nc-text-blue">&lt;meta</span> <span class="nc-text-cyan">name=</span><span class="nc-text-red">"revisit-after"</span> <span class="nc-text-cyan">content=</span><span class="nc-text-red">"1 days"</span><span class="nc-text-blue">&gt;</span>
+    <span class="nc-text-grey">&lt;!-- Link --&gt;</span>
+        <span class="nc-text-blue">&lt;link</span> <span class="nc-text-cyan">rel=</span><span class="nc-text-red">"shortcut icon"</span> <span class="nc-text-cyan">type=</span><span class="nc-text-red">"image/png"</span> <span class="nc-text-cyan">href=</span><span class="nc-text-red">"https://devnar.github.io/nar.png"</span><span class="nc-text-blue">/&gt;</span>
+        <span class="nc-text-blue">&lt;link</span> <span class="nc-text-cyan">rel=</span><span class="nc-text-red">"stylesheet"</span> <span class="nc-text-cyan">href=</span><span class="nc-text-red">"https://devnar.github.io/lib/icon.css"</span><span class="nc-text-blue">&gt;</span>
+        <span class="nc-text-blue">&lt;link</span> <span class="nc-text-cyan">rel=</span><span class="nc-text-red">"stylesheet"</span> <span class="nc-text-cyan">href=</span><span class="nc-text-red">"https://devnar.github.io/lib/all.css"</span><span class="nc-text-blue">&gt;</span>
+    <span class="nc-text-grey">&lt;!-- Script --&gt;</span>
+        <span class="nc-text-blue">&lt;script </span><span class="nc-text-cyan">src=</span><span class="nc-text-red">"https://devnar.github.io/lib/all.js"</span><span class="nc-text-blue">&gt;&lt;/script&gt;</span>
+    <span class="nc-text-grey">&lt;!-- Style --&gt;</span>
+<span class="nc-text-blue">&lt;/head&gt;</span>
+<span class="nc-text-blue">&lt;body&gt;</span>
+                                                
+<span class="nc-text-blue">&lt;/body&gt;</span>
+<span class="nc-text-blue">&lt;/html&gt;</span></code></pre>
+        </main>
+        <footer>
+            <hr />
+            <div>
+                Released under the <a href="https://opensource.org/licenses/MIT">MIT License.</a><br />
+                Copyright © 2020-2022 NAR
+            </div>
+        </footer>
+    </body>
+</html>
