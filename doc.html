@@ -114,6 +114,7 @@
     <body>
         <div class="nc-sidebar nc-bar-block nc-border-left" style="display: none; right: 0;" id="sidebar">
             <button onclick="closeMenu()" class="nc-bar-item nc-xlarge">Close &times;</button>
+            <a href="index.html" class="nc-bar-item nc-button">Back to HOME</a>
             <a href="#" class="nc-bar-item nc-button">ICON</a>
             <div class="nc-dropdown-hover">
                 <button class="nc-button">CSS <i class="icon n-chevron-down"></i></button>
@@ -148,9 +149,10 @@
         </div>
         <div style="padding: 10px; border-bottom: 2px solid white;" class="top">
             <a href=""><img src="https://devnar.github.io/logos/n.png" />{NAR}</a>
-            <i class="icon n-menu-alt-right nc-hide-large ic-mar" onclick="openMenu()"></i>
+            <i class="icon n-menu-alt-right ic-mar" onclick="openMenu()"></i>
         </div>
         <main>
+            <div style="margin-top: 20px;">
             <!-- CSS -->
             <div class="nc-cyan nc-round nc-padding" id="css">CSS</div>
             <p><span class="nc-codespan nc-round">prefix: nc</span> Add into the class tag</p>
@@ -185,7 +187,7 @@
             <div class="nc-grey nc-round nc-padding" id="panel">PANEL</div>
             <p><span class="nc-codespan nc-round">nc-panel</span> Inserts 16px padding in all html element.<br/>Example:</p>
             <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;div</span> <span class="nc-text-cyan">class=</span><span class="nc-text-red">"nc-panel nc-black"</span><span class="nc-text-blue">&gt;</span>Lorem ipsum dolor sit amet.<span class="nc-text-blue">&lt;/div&gt;</span></code></pre>
-            <p>Can be used within citations.<br/>Example</p>
+            <p>Can be used within citations.<br/>Example:</p>
             <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;div</span> <span class="nc-text-cyan">class=</span><span class="nc-text-red">"nc-panel nc-leftbar nc-sand nc-xxlarge nc-serif"</span><span class="nc-text-blue">&gt;</span>Lorem ipsum dolor sit amet.<span class="nc-text-blue">&lt;/div&gt;</span></code></pre>
             <div class="nc-grey nc-round nc-padding" id="border">BORDER</div>
             <p><span class="nc-codespan nc-round">nc-border</span> Provides the following border classes:</p>
@@ -339,14 +341,78 @@
             <div class="nc-cyan nc-round nc-padding" id="js">JS</div>
             <p><span class="nc-codespan nc-round">prefix: nj</span></p>
             <div class="nc-grey nc-round nc-padding" id="selectors">SELECTORS</div>
+            Selects HTML items and perform actions on the selected item (s).
+            <table class="nc-table nc-bordered">
+                <tr>
+                    <td>Selectors</td>
+                    <td>comment</td>
+                </tr>
+                <tr>
+                    <td>(*)</td>
+                    <td>Selects all items in the document</td>
+                </tr>
+                <tr>
+                    <td>(this)</td>
+                    <td>Selects valid HTML element</td>
+                </tr>
+                <tr>
+                    <td>("p.into")</td>
+                    <td>Selects all &lt;p class="intro"> elements</td>
+                </tr>
+                <tr>
+                    <td>(div p)</td>
+                    <td>Selects all &lt;p> elements inside all &lt;div> elements</td>
+                </tr>
+                <tr>
+                    <td>(div p:first-child)</td>
+                    <td>Selects the first &lt;p> of all &lt;div> elements</td>
+                </tr>
+                <tr>
+                    <td>("[href]")</td>
+                    <td>Selects all elements with an href attribute</td>
+                </tr>
+            </table>
             <div class="nc-grey nc-round nc-padding" id="hide">HIDE</div>
+            <p><span class="nc-codespan nc-round">nj.hide('p')</span> the p element hides.</p>
+            <p><span class="nc-codespan nc-round">nj.hide('#p')</span> p id hides the element.</p>
+            <p><span class="nc-codespan nc-round">nj.hide('.p')</span> p class hides the element.</p>
             <div class="nc-grey nc-round nc-padding" id="show">SHOW</div>
+            <p><span class="nc-codespan nc-round">nj.show('p')</span> the p element shows.</p>
+            <p><span class="nc-codespan nc-round">nj.show('#p')</span> p id shows the element.</p>
+            <p><span class="nc-codespan nc-round">nj.show('.p')</span> p class shows the element.</p>
+            <p><span class="nc-codespan nc-round">nj.toggleShow('[p/#p/.p]')</span> switches between hiding and displaying the selected element.</p>
+            more...
             <div class="nc-grey nc-round nc-padding" id="add-style">ADD STYLE</div>
+            <p><span class="nc-codespan nc-round">nj.addStyle(selector,'property','value')</span> used in the form of.<br>Example:</p>
+            <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;button</span> <span class="nc-text-cyan">onclick=</span><span class="nc-text-red">"nj.addStyle('#text','background-color','red')"</span><span class="nc-text-blue">&gt;</span>Add Style<span class="nc-text-blue">&lt;/button&gt;</span></code></pre>
             <div class="nc-grey nc-round nc-padding" id="add-class">ADD CLASS</div>
+            <p><span class="nc-codespan nc-round">nj.addClass(selector,'class')</span> used in the form of.<br>Example:</p>
+            <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;button</span> <span class="nc-text-cyan">onclick=</span><span class="nc-text-red">"nj.addClass('h2','marked')"</span><span class="nc-text-blue">&gt;</span>Add Style<span class="nc-text-blue">&lt;/button&gt;</span></code></pre>
             <div class="nc-grey nc-round nc-padding" id="filters">FILTERS</div>
+            <p><span class="nc-codespan nc-round">nj.filterHTML(selector)</span> used in the form of.<br>Example:</p>
+            <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;input</span> <span class="nc-text-cyan">oninput=</span><span class="nc-text-red">"nj.filterHTML('#id01', 'li', this.value)"</span> <span class="na">placeholder=</span><span class="nc-text-red">"Search for names.."</span><span class="nc-text-blue">&gt;</span>
+    <span class="nc-text-blue">&lt;ul</span> <span class="nc-text-cyan">id=</span><span class="nc-text-red">"id01"</span><span class="nc-text-blue">&gt;</span>
+        <span class="nc-text-blue">&lt;li&gt;</span>Alfreds Futterkiste<span class="nc-text-blue">&lt;/li&gt;</span>
+        <span class="nc-text-blue">&lt;li&gt;</span>Berglunds snabbköp<span class="nc-text-blue">&lt;/li&gt;</span>
+        <span class="nc-text-blue">&lt;li&gt;</span>Centro comercial Moctezuma<span class="nc-text-blue">&lt;/li&gt;</span>
+        <span class="nc-text-blue">&lt;li&gt;</span>Ernst Handel<span class="nc-text-blue">&lt;/li&gt;</span>
+        <span class="nc-text-blue">&lt;li&gt;</span>FISSA Fabrica Inter. Salchichas S.A.<span class="nc-text-blue">&lt;/li&gt;</span>
+    <span class="nc-text-blue">&lt;/ul&gt;</span></code></pre>
             <div class="nc-grey nc-round nc-padding" id="sort">SORT</div>
+            <p><span class="nc-codespan nc-round">nj.sortHTML(selector)</span> used in the form of.<br>Example:</p>
+            <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;button</span> <span class="nc-text-cyan">onclick=</span><span class="nc-text-red">"nj.sortHTML('#id01', 'li')"</span><span class="nc-text-blue">&gt;</span>Sort<span class="nc-text-blue">&lt;/button&gt;</span>    
+    <span class="nc-text-blue">&lt;ul</span> <span class="nc-text-cyan">id=</span><span class="nc-text-red">"id01"</span><span class="nc-text-blue">&gt;</span>
+        <span class="nc-text-blue">&lt;li&gt;</span>Oslo<span class="nc-text-blue">&lt;/li&gt;</span>
+        <span class="nc-text-blue">&lt;li&gt;</span>Stockholm<span class="nc-text-blue">&lt;/li&gt;</span>
+        <span class="nc-text-blue">&lt;li&gt;</span>Helsinki<span class="nc-text-blue">&lt;/li&gt;</span>
+        <span class="nc-text-blue">&lt;li&gt;</span>Berlin<span class="nc-text-blue">&lt;/li&gt;</span>
+        <span class="nc-text-blue">&lt;li&gt;</span>Rome<span class="nc-text-blue">&lt;/li&gt;</span>
+        <span class="nc-text-blue">&lt;li&gt;</span>Madrid<span class="nc-text-blue">&lt;/li&gt;</span>
+    <span class="nc-text-blue">&lt;/ul&gt;</span></code></pre>
             <div class="nc-grey nc-round nc-padding" id="slide-shows">SLIDE SHOWS</div>
+            <p><span class="nc-codespan nc-round">nj.slideshow(selector, time (milliseconds))</span>  used in the form of. Makes a slide show.</p>
             <div class="nc-grey nc-round nc-padding" id="display">DISPLAY</div>
+            <p><span class="nc-codespan nc-round">nj.displayObject(selector)</span>  used in the form of. Simply add parentheses to any HTML item to take part in your data.</p>
         </main>
         <footer>
             <hr />
