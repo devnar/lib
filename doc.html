@@ -1,13 +1,14 @@
-<html>
+<html lang="en">
     <head>
         <title>NAR - lib</title>
         <!-- Meta -->
-        <meta name="viewport" content="width=device-width,  initial-scale=1, maximum-scale=1 user-scalable=0" />
-        <meta name="description" content="Hazır HTML şablonu, CSS ve JS kodları, simgeler" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="description" content="Hazır HTML şablonu, JS kodları, simgeler" />
         <meta name="copyright" content="NAR © 2021 Tüm hakları saklı" />
         <meta name="theme-color" content="#23b5b5" />
         <meta property="og:title" content="NAR - lib" />
-        <meta property="og:description" content="Hazır HTML şablonu, CSS ve JS kodları, simgeler" />
+        <meta property="og:description" content="Hazır HTML şablonu, JS kodları, simgeler" />
         <meta property="og:image" content="https://devnar.github.io/logos/n.png" />
         <!-- /robots -->
         <meta name="robots" content="index,follow" />
@@ -15,10 +16,10 @@
         <!-- Link -->
         <link rel="shortcut icon" type="image/png" href="https://devnar.github.io/logos/n.png" />
         <link rel="stylesheet" href="https://devnar.github.io/lib/icon.css" />
-        <link rel="stylesheet" href="https://devnar.github.io/lib/all.css" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <!-- Script -->
         <script src="https://devnar.github.io/lib/all.js"></script>
+        <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
         <script>
             function openMenu() {
                 document.getElementById("sidebar").style.display = "block";
@@ -27,6 +28,7 @@
                 document.getElementById("sidebar").style.display = "none";
             }
         </script>
+        
         <!-- Style -->
         <style>
             body {
@@ -34,20 +36,19 @@
                 background: #363940;
             }
 
-            pre {
+            div {
                 overflow: hidden;
             }
 
-            .nc-sidebar {
+            .w3-sidebar {
                 background-color: rgba(0, 0, 0, 0.5);
             }
             header {
                 width: 100%;
-                height: 286px;
+                background-color: #363940;
                 margin: 0;
                 padding: 10px;
-                background-image: url("https://devnar.github.io/gif/oda.gif");
-                border-radius: 0px 0px 40% 40%;
+                position: fixed;
             }
 
             .top button {
@@ -65,9 +66,8 @@
                 width: 45px;
                 margin-right: 5px;
             }
-            .top i {
+            .top span {
                 float: right;
-                font-size: 30px;
             }
             .top p {
                 width: 100%;
@@ -92,14 +92,13 @@
                 }
             }
 
-            .nc-code {
-                color: #000;
+            .w3-code {
                 border-radius: 5px;
                 padding-right: 100;
+                border-left: #23b5b5 5px solid;
             }
-            .nc-grey {
+            .w3-grey {
                 margin-top: 10px;
-                scroll-margin-top: 50px;
             }
 
             footer {
@@ -114,237 +113,25 @@
         </style>
     </head>
     <body>
-        <div class="nc-sidebar nc-bar-block nc-border-left" style="display: none; right: 0;" id="sidebar">
-            <button onclick="closeMenu()" class="nc-bar-item nc-xlarge">Close &times;</button>
-            <a href="/lib" class="nc-bar-item nc-button">Back to HOME</a>
-            <a href="#" class="nc-bar-item nc-button">ICON</a>
-            <div class="nc-dropdown-hover">
-                <button class="nc-button">CSS <i class="icon n-chevron-down"></i></button>
-                <div class="nc-dropdown-content nc-bar-block">
-                    <a href="doc#color" class="nc-bar-item nc-button">Color</a>
-                    <a href="doc#color-types" class="nc-bar-item nc-button">Color Types</a>
-                    <a href="doc#container" class="nc-bar-item nc-button">Container</a>
-                    <a href="doc#panel" class="nc-bar-item nc-button">Panel</a>
-                    <a href="doc#border" class="nc-bar-item nc-button">Border</a>
-                    <a href="doc#cards" class="nc-bar-item nc-button">Cards</a>
-                    <a href="doc#fonts" class="nc-bar-item nc-button">Fonts</a>
-                    <a href="doc#text" class="nc-bar-item nc-button">Text</a>
-                    <a href="doc#round" class="nc-bar-item nc-button">Round</a>
-                    <a href="doc#margin" class="nc-bar-item nc-button">Margin</a>
-                    <a href="doc#padding" class="nc-bar-item nc-button">Padding</a>
-                </div>
-            </div>
-            <div class="nc-dropdown-hover">
-                <button class="nc-button">JS <i class="icon n-chevron-down"></i></button>
-                <div class="nc-dropdown-content nc-bar-block">
-                    <a href="doc#selectors" class="nc-bar-item nc-button">Selectors</a>
-                    <a href="doc#hide" class="nc-bar-item nc-button">Hide</a>
-                    <a href="doc#show" class="nc-bar-item nc-button">Show</a>
-                    <a href="doc#add-style" class="nc-bar-item nc-button">Add Style</a>
-                    <a href="doc#add-class" class="nc-bar-item nc-button">Add Class</a>
-                    <a href="doc#filters" class="nc-bar-item nc-button">Filters</a>
-                    <a href="doc#sort" class="nc-bar-item nc-button">Sort</a>
-                    <a href="doc#slide-shows" class="nc-bar-item nc-button">Slide Shows</a>
-                    <a href="doc#display" class="nc-bar-item nc-button">Display</a>
-                </div>
-            </div>
+        <div class="w3-sidebar w3-bar-block w3-border-left" style="display: none; right: 0;" id="sidebar">
+            <button onclick="closeMenu()" class="w3-bar-item w3-xlarge">Close &times;</button>
+            <a href="/lib" class="w3-bar-item w3-button">HOME</a>
+            <a href="#" class="w3-bar-item w3-button">ICON</a>
         </div>
-        <div style="padding: 10px; border-bottom: 2px solid white;" class="top">
-            <a href=""><img src="https://devnar.github.io/logos/n.png" />{NAR}</a>
-            <i class="icon n-menu-alt-right ic-mar" onclick="openMenu()"></i>
-        </div>
+        <header style="padding: 10px; border-bottom: 2px solid white;">
+            <div class="top">
+                <a href="/lib"><img src="https://devnar.github.io/logos/n.png" />{NAR}</a>
+                <span class="icon n-menu-alt-right w3-hide-large" style="font-size: 30px !important;" onclick="openMenu()"></span>
+                <span class="w3-hide-medium w3-hide-small"><a href="/lib">HOME</a><b style="margin-left: 10px;margin-right: 10px;pointer-events: none;">-</b><a href="#">ICON</a>            
+            </div>
+        </header>
         <main>
-            <div style="margin-top: 20px;">
-            <!-- CSS -->
-            <div class="nc-cyan nc-round nc-padding" id="css">CSS</div>
-            <p><span class="nc-codespan nc-round">prefix: nc</span> Add into the class tag</p>
-            <div class="nc-grey nc-round nc-padding" id="color">COLOR</div>
-            <p>Can give color to the text.<br/>Example:</p>
-            <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;div</span> <span class="nc-text-cyan">class=</span><span class="nc-text-red">"nc-text-cyan"</span><span class="nc-text-blue">&gt;</span>Lorem ipsum dolor sit amet.<span class="nc-text-blue">&lt;/div&gt;</span></code></pre>
-            <p>Can give color to the background.<br/>Example:</p>
-            <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;div</span> <span class="nc-text-cyan">class=</span><span class="nc-text-red">"nc-black"</span><span class="nc-text-blue">&gt;</span>Lorem ipsum dolor sit amet.<span class="nc-text-blue">&lt;/div&gt;</span></code></pre>
-            <p>Can give color to the border.<br/>Example:</p>
-            <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;div</span> <span class="nc-text-cyan">class=</span><span class="nc-text-red">"nc-boreder-cyan"</span><span class="nc-text-blue">&gt;</span>Lorem ipsum dolor sit amet.<span class="nc-text-blue">&lt;/div&gt;</span></code></pre>
-            <p>Can give color to the hover.<br/>Example:</p>
-            <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;div</span> <span class="nc-text-cyan">class=</span><span class="nc-text-red">"nc-hover-cyan"</span><span class="nc-text-blue">&gt;</span>Lorem ipsum dolor sit amet.<span class="nc-text-blue">&lt;/div&gt;</span></code></pre>
-            <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;div</span> <span class="nc-text-cyan">class=</span><span class="nc-text-red">"nc-hover-text-cyan"</span><span class="nc-text-blue">&gt;</span>Lorem ipsum dolor sit amet.<span class="nc-text-blue">&lt;/div&gt;</span></code></pre>
-            <div class="nc-grey nc-round nc-padding" id="color-types">Color types</div>
-            <ol>
-                <li>black</li>
-                <li>blue</li>
-                <li>brown</li>
-                <li>cyan</li>
-                <li>green</li>
-                <li>grey</li>
-                <li>orange</li>
-                <li>pink</li>
-                <li>purple</li>
-                <li>red</li>
-                <li>yellow</li>
-                <li>white</li>
-            </ol>
-            <div class="nc-grey nc-round nc-padding" id="container">CONTAINER</div>
-            <p><span class="nc-codespan nc-round">nc-container</span> It is the perfect classroom to use all HTML container elements</p>
-            <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;div</span> <span class="nc-text-cyan">class=</span><span class="nc-text-red">"nc-container nc-black"</span><span class="nc-text-blue">&gt;</span>Lorem ipsum dolor sit amet.<span class="nc-text-blue">&lt;/div&gt;</span></code></pre>
-            <div class="nc-grey nc-round nc-padding" id="panel">PANEL</div>
-            <p><span class="nc-codespan nc-round">nc-panel</span> Inserts 16px padding in all html element.<br/>Example:</p>
-            <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;div</span> <span class="nc-text-cyan">class=</span><span class="nc-text-red">"nc-panel nc-black"</span><span class="nc-text-blue">&gt;</span>Lorem ipsum dolor sit amet.<span class="nc-text-blue">&lt;/div&gt;</span></code></pre>
-            <p>Can be used within citations.<br/>Example:</p>
-            <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;div</span> <span class="nc-text-cyan">class=</span><span class="nc-text-red">"nc-panel nc-leftbar nc-sand nc-xxlarge nc-serif"</span><span class="nc-text-blue">&gt;</span>Lorem ipsum dolor sit amet.<span class="nc-text-blue">&lt;/div&gt;</span></code></pre>
-            <div class="nc-grey nc-round nc-padding" id="border">BORDER</div>
-            <p><span class="nc-codespan nc-round">nc-border</span> Provides the following border classes:</p>
-            <table class="nc-table nc-bordered">
-                <tr>
-                    <td>Syntax</td>
-                    <td>comment</td>
-                </tr>
-                <tr>
-                    <td>nc-border-top</td>
-                    <td>Adds top border to an item</td>
-                </tr>
-                <tr>
-                    <td>nc-border-right</td>
-                    <td>Adds right border to an item</td>
-                </tr>
-                <tr>
-                    <td>nc-border-left</td>
-                    <td>Adds left border to an item</td>
-                </tr>
-                <tr>
-                    <td>nc-border-bottom</td>
-                    <td>Adds bottom border to an item</td>
-                </tr>
-                <tr>
-                    <td>nc-border-0</td>
-                    <td>erases the border of an item</td>
-                </tr>
-                <tr>
-                    <td>nc-hover-border</td>
-                    <td>Adds hover border to an item</td>
-                </tr>
-                <tr>
-                    <td>nc-topbar</td>
-                    <td>Adds a thick top border to an item</td>
-                </tr>
-                <tr>
-                    <td>nc-rightbar</td>
-                    <td>Adds a thick right border to an item</td>
-                </tr>
-                <tr>
-                    <td>nc-leftbar</td>
-                    <td>Adds a thick left border to an item</td>
-                </tr>
-                <tr>
-                    <td>nc-bottombar</td>
-                    <td>Adds a thick bottom border to an item</td>
-                </tr>
-            </table>
-            <div class="nc-grey nc-round nc-padding" id="cards">CARDS</div>
-            <table class="nc-table nc-bordered">
-                <tr>
-                    <td>Syntax</td>
-                    <td>comment</td>
-                </tr>
-                <tr>
-                    <td>nc-card</td>
-                    <td>Adds container for any HTML content</td>
-                </tr>
-                <tr>
-                    <td>nc-card-2</td>
-                    <td>
-                        Adds container for any HTML content <br/>
-                        (2 pixels border shadow)
-                    </td>
-                </tr>
-                <tr>
-                    <td>nc-card-4</td>
-                    <td>
-                        Adds container for any HTML content <br/>
-                        (4 pixels border shadow)
-                    </td>
-                </tr>
-            </table>
-            <p>Use the <span class="nc-codespan nc-round">nc-(color)</span> Command to color the cards. Add <span class="nc-codespan nc-round">nc-container</span> to add different sections.<br/>Example:</p>
-            <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;div</span> <span class="nc-text-cyan">class=</span><span class="nc-text-red">"nc-card-4"</span><span class="nc-text-blue">&gt;</span>
-    <span class="nc-text-blue">&lt;div</span> <span class="nc-text-cyan">class=</span><span class="nc-text-red">"nc-display-container nc-text-white"</span><span class="nc-text-blue">&gt;</span>
-        <span class="nc-text-blue">&lt;img</span> <span class="nc-text-cyan">src=</span><span class="nc-text-red">"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1474000/istanbul-1475727_2.jpg"</span> <span class="nc-text-cyan">alt=</span><span class="nc-text-red">"Lights"</span> <span class="nc-text-cyan">style=</span><span class="nc-text-red">"width:100%"</span><span class="nc-text-blue">&gt;</span>
-        <span class="nc-text-blue">&lt;div</span> <span class="nc-text-cyan">class=</span><span class="nc-text-red">"nc-xlarge nc-display-bottomleft nc-padding"</span><span class="nc-text-blue">&gt;</span>İstanbul 8<span class="ni">&amp;deg;</span> C<span class="nc-text-blue">&lt;/div&gt;</span>
-    <span class="nc-text-blue">&lt;/div&gt;</span>
-    <span class="nc-text-blue">&lt;div</span> <span class="nc-text-cyan">class=</span><span class="nc-text-red">"nc-row"</span><span class="nc-text-blue">&gt;</span>
-        <span class="nc-text-blue">&lt;div</span> <span class="nc-text-cyan">class=</span><span class="nc-text-red">"nc-third nc-center"</span><span class="nc-text-blue">&gt;</span>
-            <span class="nc-text-blue">&lt;h3&gt;</span>MON<span class="nc-text-blue">&lt;/h3&gt;</span>
-            <span class="nc-text-blue">&lt;img</span> <span class="nc-text-cyan">src=</span><span class="nc-text-red">"https://img.icons8.com/color/48/sun--v2.gif"</span><span class="nc-text-blue">/&gt;</span>
-        <span class="nc-text-blue">&lt;/div&gt;</span>
-        <span class="nc-text-blue">&lt;div</span> <span class="nc-text-cyan">class=</span><span class="nc-text-red">"nc-third nc-center"</span><span class="nc-text-blue">&gt;</span>
-            <span class="nc-text-blue">&lt;h3&gt;</span>TUE<span class="nc-text-blue">&lt;/h3&gt;</span>
-            <span class="nc-text-blue">&lt;img</span> <span class="nc-text-cyan">src=</span><span class="nc-text-red">"https://img.icons8.com/color/48/partly-cloudy-rain--v2.gif"</span><span class="nc-text-blue">/&gt;</span>
-        <span class="nc-text-blue">&lt;/div&gt;</span>
-        <span class="nc-text-blue">&lt;div</span> <span class="nc-text-cyan">class=</span><span class="nc-text-red">"nc-third nc-center nc-margin-bottom"</span><span class="nc-text-blue">&gt;</span>
-            <span class="nc-text-blue">&lt;h3&gt;</span>WED<span class="nc-text-blue">&lt;/h3&gt;</span>
-            <span class="nc-text-blue">&lt;img</span> <span class="nc-text-cyan">src=</span><span class="nc-text-red">"https://img.icons8.com/color/48/storm--v2.gif"</span><span class="nc-text-blue">/&gt;</span>
-        <span class="nc-text-blue">&lt;/div&gt;</span>
-    <span class="nc-text-blue">&lt;/div&gt;</span>
-<span class="nc-text-blue">&lt;/div&gt;</span></code></pre>
-            <div class="nc-grey nc-round nc-padding" id="fonts">FONTS</div>
-            <p>3 different types of fonts can be used. These:</p>
-            <table class="nc-table nc-bordered">
-                <tr>
-                    <td>nc-serif</td>
-                </tr>
-                <tr>
-                    <td>nc-sans-serif</td>
-                </tr>
-                <tr>
-                    <td>nc-cursive</td>
-                </tr>
-            </table>
-            <div class="nc-grey nc-round nc-padding" id="text">TEXT</div>
-            <p><span class="nc-codespan nc-round">nc-left-align</span> and <span class="nc-codespan nc-round">nc-right-align</span> classes are used to align the text. The <span class="nc-codespan nc-round">nc-wide</span> class specifies a wider text. The <span class="nc-codespan nc-round">nc-opacity</span> class is designed to work with all colors, changes the text opacity.</p>
-            <div class="nc-grey nc-round nc-padding" id="round">ROUND</div>
-            <p><span class="nc-codespan nc-round">nc-round</span>Adds rounded corners to any HTML element.</p>
-            <table class="nc-table nc-bordered">
-                <tr>
-                    <td>Syntax</td>
-                    <td>comment</td>
-                </tr>
-                <tr>
-                    <td>nc-round</td>
-                    <td>Adds a 4-pixel rounded item</td>
-                </tr>
-                <tr>
-                    <td>nc-round-small</td>
-                    <td>Adds a 2-pixel rounded item</td>
-                </tr>
-                <tr>
-                    <td>nc-round-medium</td>
-                    <td>Adds a 4-pixel rounded item</td>
-                </tr>
-                <tr>
-                    <td>nc-round-large</td>
-                    <td>Adds a 8-pixel rounded item</td>
-                </tr>
-                <tr>
-                    <td>nc-round-xlarge</td>
-                    <td>Adds a 16-pixel rounded item</td>
-                </tr>
-                <tr>
-                    <td>nc-round-xxlarge</td>
-                    <td>Adds a 32-pixel rounded item</td>
-                </tr>
-            </table>
-            <div class="nc-grey nc-round nc-padding" id="margin">MARGIN</div>
-            <p><span class="nc-codespan nc-round">nc-margin</span> class adds a 16 pixel margin to all edges of an item. You can set the margin by adding space to the top, right, left, bottom.</p>
-            <div class="nc-grey nc-round nc-padding" id="padding">PADDING</div>
-            <p><span class="nc-codespan nc-round">nc-padding</span> classes add the upper and lower padding to any HTML. You should use Small, Large, 16, 24, 32, 48, 64 to size.</p>
-            <br/>
-            <br/>
-
-            <!-- JavaScript -->
-            <div class="nc-cyan nc-round nc-padding" id="js">JS</div>
-            <p><span class="nc-codespan nc-round">prefix: nj</span></p>
-            <div class="nc-grey nc-round nc-padding" id="selectors">SELECTORS</div>
+            <div style="width: 100%;height: 85px;"></div>
+            <div class="w3-cyan w3-round w3-padding" id="js">JS</div>
+            <p><span class="w3-codespan w3-round">prefix: nj</span></p>
+            <div class="w3-grey w3-round w3-padding" id="selectors">SELECTORS</div>
             Selects HTML items and perform actions on the selected item (s).
-            <table class="nc-table nc-bordered">
+            <table class="w3-table w3-bordered">
                 <tr>
                     <td>Selectors</td>
                     <td>comment</td>
@@ -374,54 +161,40 @@
                     <td>Selects all elements with an href attribute</td>
                 </tr>
             </table>
-            <div class="nc-grey nc-round nc-padding" id="hide">HIDE</div>
-            <p><span class="nc-codespan nc-round">nj.hide('p')</span> the p element hides.</p>
-            <p><span class="nc-codespan nc-round">nj.hide('#p')</span> p id hides the element.</p>
-            <p><span class="nc-codespan nc-round">nj.hide('.p')</span> p class hides the element.</p>
-            <div class="nc-grey nc-round nc-padding" id="show">SHOW</div>
-            <p><span class="nc-codespan nc-round">nj.show('p')</span> the p element shows.</p>
-            <p><span class="nc-codespan nc-round">nj.show('#p')</span> p id shows the element.</p>
-            <p><span class="nc-codespan nc-round">nj.show('.p')</span> p class shows the element.</p>
-            <p><span class="nc-codespan nc-round">nj.toggleShow('[p/#p/.p]')</span> switches between hiding and displaying the selected element.</p>
+            <div class="w3-grey w3-round w3-padding" id="hide">HIDE</div>
+            <p><span class="w3-codespan w3-round">nj.hide('p')</span> the p element hides.</p>
+            <p><span class="w3-codespan w3-round">nj.hide('#p')</span> p id hides the element.</p>
+            <p><span class="w3-codespan w3-round">nj.hide('.p')</span> p class hides the element.</p>
+            <div class="w3-grey w3-round w3-padding" id="show">SHOW</div>
+            <p><span class="w3-codespan w3-round">nj.show('p')</span> the p element shows.</p>
+            <p><span class="w3-codespan w3-round">nj.show('#p')</span> p id shows the element.</p>
+            <p><span class="w3-codespan w3-round">nj.show('.p')</span> p class shows the element.</p>
+            <p><span class="w3-codespan w3-round">nj.toggleShow('[p/#p/.p]')</span> switches between hiding and displaying the selected element.</p>
             more...
-            <div class="nc-grey nc-round nc-padding" id="add-style">ADD STYLE</div>
-            <p><span class="nc-codespan nc-round">nj.addStyle(selector,'property','value')</span> used in the form of.<br>Example:</p>
-            <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;button</span> <span class="nc-text-cyan">onclick=</span><span class="nc-text-red">"nj.addStyle('#text','background-color','red')"</span><span class="nc-text-blue">&gt;</span>Add Style<span class="nc-text-blue">&lt;/button&gt;</span></code></pre>
-            <div class="nc-grey nc-round nc-padding" id="add-class">ADD CLASS</div>
-            <p><span class="nc-codespan nc-round">nj.addClass(selector,'class')</span> used in the form of.<br>Example:</p>
-            <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;button</span> <span class="nc-text-cyan">onclick=</span><span class="nc-text-red">"nj.addClass('h2','marked')"</span><span class="nc-text-blue">&gt;</span>Add Style<span class="nc-text-blue">&lt;/button&gt;</span></code></pre>
-            <div class="nc-grey nc-round nc-padding" id="filters">FILTERS</div>
-            <p><span class="nc-codespan nc-round">nj.filterHTML(selector)</span> used in the form of.<br>Example:</p>
-            <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;input</span> <span class="nc-text-cyan">oninput=</span><span class="nc-text-red">"nj.filterHTML('#id01', 'li', this.value)"</span> <span class="na">placeholder=</span><span class="nc-text-red">"Search for names.."</span><span class="nc-text-blue">&gt;</span>
-    <span class="nc-text-blue">&lt;ul</span> <span class="nc-text-cyan">id=</span><span class="nc-text-red">"id01"</span><span class="nc-text-blue">&gt;</span>
-        <span class="nc-text-blue">&lt;li&gt;</span>Alfreds Futterkiste<span class="nc-text-blue">&lt;/li&gt;</span>
-        <span class="nc-text-blue">&lt;li&gt;</span>Berglunds snabbköp<span class="nc-text-blue">&lt;/li&gt;</span>
-        <span class="nc-text-blue">&lt;li&gt;</span>Centro comercial Moctezuma<span class="nc-text-blue">&lt;/li&gt;</span>
-        <span class="nc-text-blue">&lt;li&gt;</span>Ernst Handel<span class="nc-text-blue">&lt;/li&gt;</span>
-        <span class="nc-text-blue">&lt;li&gt;</span>FISSA Fabrica Inter. Salchichas S.A.<span class="nc-text-blue">&lt;/li&gt;</span>
-    <span class="nc-text-blue">&lt;/ul&gt;</span></code></pre>
-            <div class="nc-grey nc-round nc-padding" id="sort">SORT</div>
-            <p><span class="nc-codespan nc-round">nj.sortHTML(selector)</span> used in the form of.<br>Example:</p>
-            <pre class="nc-code nc-black"><code><span class="nc-text-blue">&lt;button</span> <span class="nc-text-cyan">onclick=</span><span class="nc-text-red">"nj.sortHTML('#id01', 'li')"</span><span class="nc-text-blue">&gt;</span>Sort<span class="nc-text-blue">&lt;/button&gt;</span>    
-    <span class="nc-text-blue">&lt;ul</span> <span class="nc-text-cyan">id=</span><span class="nc-text-red">"id01"</span><span class="nc-text-blue">&gt;</span>
-        <span class="nc-text-blue">&lt;li&gt;</span>Oslo<span class="nc-text-blue">&lt;/li&gt;</span>
-        <span class="nc-text-blue">&lt;li&gt;</span>Stockholm<span class="nc-text-blue">&lt;/li&gt;</span>
-        <span class="nc-text-blue">&lt;li&gt;</span>Helsinki<span class="nc-text-blue">&lt;/li&gt;</span>
-        <span class="nc-text-blue">&lt;li&gt;</span>Berlin<span class="nc-text-blue">&lt;/li&gt;</span>
-        <span class="nc-text-blue">&lt;li&gt;</span>Rome<span class="nc-text-blue">&lt;/li&gt;</span>
-        <span class="nc-text-blue">&lt;li&gt;</span>Madrid<span class="nc-text-blue">&lt;/li&gt;</span>
-    <span class="nc-text-blue">&lt;/ul&gt;</span></code></pre>
-            <div class="nc-grey nc-round nc-padding" id="slide-shows">SLIDE SHOWS</div>
-            <p><span class="nc-codespan nc-round">nj.slideshow(selector, time (milliseconds))</span>  used in the form of. Makes a slide show.</p>
-            <div class="nc-grey nc-round nc-padding" id="display">DISPLAY</div>
-            <p><span class="nc-codespan nc-round">nj.displayObject(selector)</span>  used in the form of. Simply add parentheses to any HTML item to take part in your data.</p>
+            <div class="w3-grey w3-round w3-padding" id="add-style">ADD STYLE</div>
+            <p><span class="w3-codespan w3-round">nj.addStyle(selector,'property','value')</span> used in the form of.<br>Example:</p>
+            <div class="w3-code w3-white htmlHigh">&lt;button onclick="nj.addStyle('#text','background-color','red')"&gt;Add Style&lt;/button&gt;</div>
+            <div class="w3-grey w3-round w3-padding" id="add-class">ADD CLASS</div>
+            <p><span class="w3-codespan w3-round">nj.addClass(selector,'class')</span> used in the form of.<br>Example:</p>
+            <div class="w3-code w3-white htmlHigh">&lt;button onclick="nj.addClass('h2','marked')"&gt;Add Style&lt;/button&gt;</div>
+            <div class="w3-grey w3-round w3-padding" id="filters">FILTERS</div>
+            <p><span class="w3-codespan w3-round">nj.filterHTML(selector)</span> used in the form of.<br>Example:</p>
+            <div class="w3-code w3-white htmlHigh">&lt;input oninput="nj.filterHTML('#id01', 'li', this.value)" placeholder="Search for names.."&gt;<br>&lt;ul id="id01"&gt;<br>&lt;li&gt;Alfreds Futterkiste&lt;/li&gt;<br>&lt;li&gt;Berglunds snabbköp&lt;/li&gt;<br>&lt;li&gt;Centro comercial Moctezuma&lt;/li&gt;<br>&lt;li&gt;Ernst Handel&lt;/li&gt;<br>&lt;li&gt;FISSA Fabrica Inter. Salchichas S.A.&lt;/li&gt;<br>&lt;/ul&gt;</div>
+            <div class="w3-grey w3-round w3-padding" id="sort">SORT</div>
+            <p><span class="w3-codespan w3-round">nj.sortHTML(selector)</span> used in the form of.<br>Example:</p>
+            <div class="w3-code w3-white htmlHigh">&lt;button onclick="nj.sortHTML('#id01', 'li')"&gt;Sort&lt;/button&gt;<br>&lt;ul id="id01"&gt;<br>&lt;li&gt;Oslo&lt;/li&gt;<br>&lt;li&gt;Stockholm&lt;/li&gt;<br>&lt;li&gt;Helsinki&lt;/li&gt;<br>&lt;li&gt;Berlin&lt;/li&gt;<br>&lt;li&gt;Rome&lt;/li&gt;<br>&lt;li&gt;Madrid&lt;/li&gt;<br>&lt;/ul&gt;</div>
+            <div class="w3-grey w3-round w3-padding" id="slide-shows">SLIDE SHOWS</div>
+            <p><span class="w3-codespan w3-round">nj.slideshow(selector, time (milliseconds))</span>  used in the form of. Makes a slide show.</p>
+            <div class="w3-grey w3-round w3-padding" id="display">DISPLAY</div>
+            <p><span class="w3-codespan w3-round">nj.displayObject(selector)</span>  used in the form of. Simply add parentheses to any HTML item to take part in your data.</p>
         </main>
         <footer>
             <hr />
             <div>
-                Released under the <a href="https://opensource.org/licenses/MIT">MIT License.</a><br/>
+                Released under the <a href="https://opensource.org/licenses/MIT">MIT License.</a><br />
                 Copyright © 2020-2022 NAR
             </div>
         </footer>
+        <script>w3CodeColor();</script>
     </body>
-</html>
+</html> 
