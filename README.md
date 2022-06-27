@@ -8,9 +8,6 @@ bu sitenin amacı daha hızlı ve kolay kodlama yapmaktır. [NAR](https://devnar
 <link rel="stylesheet" href="https://devnar.github.io/lib/icon.css">
 ```
 ```html
-<link rel="stylesheet" href="https://devnar.github.io/lib/all.css">
-```
-```html
 <script src="https://devnar.github.io/lib/all.js"></script>
 ```
 ## HTML template
