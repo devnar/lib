@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-image: url("https://devnar.github.io/bg/oda_2.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    text-align: center
+  }
+  
+  #menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #menu li {
+    margin: 0 15px;
+  }
+  
+  #menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  #menu a:hover {
+    color: #23b5b5;
+  }
+  
+  #search-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #search-box {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    outline: none;
+  }
+
+  main {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+
+ #icon {
+    display: none;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+
+  #js {
+    display: none;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+  
+  #tools {
+    display:none;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #tools li {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #tools li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  #icons {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #icons li {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #icons li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  footer {
+    background: repeating-linear-gradient(45deg, transparent, transparent 10px, #141517 10px, #090909 20px);
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+  }
+  
+  footer .card {
+    background: black;
+    padding: 20px;
+    color: white;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  div.hr {
+    height: 10px;
+    background: repeating-linear-gradient(45deg, transparent, transparent 10px, #141517 10px, #090909 20px);
+  }
