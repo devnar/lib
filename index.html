@@ -25,7 +25,7 @@
         <header>
             <h1>{NAR}</h1>
             <ul id="menu">
-                <li><a href="https://devnar.github.io">home</a></li>
+                <li><a href="#">home</a></li>
                 <li><a href="#">icon</a></li>
                 <li><a href="#">js</a></li>
                 <li><a href="#">tools</a></li>
@@ -36,15 +36,37 @@
         </header>
         <div class="hr"></div>
         <main id="main">
-            <h3>Icon'u siteye ekle:</h3>
-            <pre><code class="n1-code htmlHigh notranslate">&lt;link rel="stylesheet" href="https://devnar.github.io/lib/all/icon.css"&gt;</code></pre>
-            <h3>JS'i siteye ekle:</h3>
-            <pre><code class="n1-code htmlHigh notranslate">&lt;link rel="stylesheet" href="https://devnar.github.io/lib/all/script.js"&gt;</code></pre>
+            <h3>Icon siteye ekle:</h3>
+            <pre><code class="w3-code htmlHigh notranslate">&lt;link rel="stylesheet" href="https://devnar.github.io/lib/all/icon.css"&gt;</code></pre>
+            <h3>JS siteye ekle:</h3>
+            <pre><code class="w3-code htmlHigh notranslate">&lt;link rel="stylesheet" href="https://devnar.github.io/lib/all/script.js"&gt;</code></pre>
+            <h3>CEO siteye ekle:</h3>
+            <pre class="w3-code"><code class="htmlHigh notranslate">&lt;title>TİTLE&lt;/title>
+    &lt;!-- Meta -->
+        &lt;meta name="viewport" content="width=device-width,  initial-scale=1, maximum-scale=1 user-scalable=0" />
+        &lt;meta name="description" content="your description" />
+        &lt;meta name="copyright" content="NAR © 2021 Tüm hakları saklı" />
+        &lt;meta name="theme-color" content="#23b5b5" />
+        &lt;meta property="og:title" content="Title" />
+        &lt;meta property="og:description" content="description" />
+        &lt;meta property="og:image" content="tikle.png" />
+    &lt;!-- /robots -->
+        &lt;meta name="robots" content="index,follow" />
+        &lt;meta name="revisit-after" content="1 days" />
+    &lt;!-- Link -->
+        &lt;link rel="preconnect" href="https://fonts.googleapis.com">
+        &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        &lt;link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+        &lt;link rel="shortcut icon" type="image/png" href="https://devnar.github.io/logos/tikle.png" />
+        &lt;link rel="stylesheet" href="https://devnar.github.io/lib/all.css" />
+    &lt;!-- Script -->
+        &lt;script src="https://devnar.github.io/lib/all/script.js">&lt;/script>
+    &lt;!-- Style --></code></pre>
         </main>
         <div id="icon">
             <h3>Nasıl Kullanılır?</h3>
             yukarıdaki kodu <strong>&lt;HEAD&gt;</strong>'e ekledikten sonra aşağıdaki gibi ekleyebilirsiniz:
-            <pre class="n1-code htmlHigh notranslate">&lt;[element] class="icon n-[name]"&gt;</pre>
+            <pre class="w3-code htmlHigh notranslate">&lt;[element] class="icon n-[name]"&gt;</pre>
             <h3>İcon İsimleri:</h3>
             <div id="icons"></div>
         </div>
@@ -145,11 +167,11 @@
             <p><span class="w3-codespan w3-round">n1.displayObject(selector)</span> used in the form of. Simply add parentheses to any HTML item to take part in your data.</p>
         </div>
         <ul id="tools">
-            <li>Örnek Sonuç 1</li>
-            <li>Örnek Sonuç 2</li>
-            <li>Örnek Sonuç 3</li>
-            <li>Örnek Sonuç 4</li>
-            <li>Örnek Sonuç 5</li>
+            <li><a href="https://codepen.io/_devnar/full/gOZXmdo">QR Code Generator</a></li>
+            <li><a href="https://codepen.io/_devnar/full/ZEVaewz">Word Counter</a></li>
+            <li><a href="https://codepen.io/_devnar/full/bGYKQYX">Password Generator</a></li>
+            <li><a href="https://codepen.io/_devnar/full/WNLXjrW">Markdown Preview</a></li>
+            <li>Yakında Daha Fazlası</li>
         </ul>
         <footer>
             <div class="card">&copy; 2023 Örnek Web Sitesi. Tüm hakları saklıdır. |<a href="#sart">Kullanım Şartları</a></div>
@@ -164,8 +186,10 @@
             });
 
             if (n1.getParameterByName("") == "icon") {
+                document.getElementById("main").style.display = "none";
                 document.getElementById("icon").style.display = "block";
             } else if (n1.getParameterByName("") == "js") {
+                document.getElementById("main").style.display = "none";
                 document.getElementById("js").style.display = "block";
             } else if (n1.getParameterByName("") == "tools") {
                 document.getElementById("main").style.display = "none";

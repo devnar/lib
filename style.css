@@ -16,6 +16,11 @@ body {
     padding: 20px;
     text-align: center
   }
+
+  pre {
+    overflow-x: auto; /* Yatay kaydırma çubuğunu etkinleştirin */
+    white-space: nowrap;
+  }
   
   #menu {
     list-style: none;
@@ -59,6 +64,7 @@ body {
   main {
     margin-left: 8%;
     margin-right: 8%;
+    overflow: hidden;
   }
 
  #icon {
